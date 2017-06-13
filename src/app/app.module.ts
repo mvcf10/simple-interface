@@ -6,18 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MenuComponent } from './menu/menu.component';
 
 import { MaterializeModule } from 'angular2-materialize';
-import { SideNavComponent } from './menu/side-nav/side-nav.component';
+import { InterfaceComponent } from './interface/interface.component';
+import { HeaderComponent } from './interface/header/header.component';
+import { FooterComponent } from './interface/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    MenuComponent,
-    SideNavComponent
+    InterfaceComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
