@@ -11,6 +11,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { InterfaceComponent } from './interface/interface.component';
 import { HeaderComponent } from './interface/header/header.component';
 import { FooterComponent } from './interface/footer/footer.component';
+import { MainComponent } from './interface/main/main.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './interface/footer/footer.component';
     DashboardComponent,
     InterfaceComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
