@@ -1,3 +1,4 @@
+import { AuthGuard } from './guard/auth.guard';
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,11 +15,11 @@ import { HomeComponent } from './home/home.component';
 const APP_ROUTES: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'menu1', component: Menu1Component},
-  {path: 'menu2', component: Menu2Component},
-  {path: 'menu3', component: Menu3Component},
-  {path: 'menu4', component: Menu4Component},
+  {path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
+  {path: 'menu1', component: Menu1Component,canActivate:[AuthGuard]},
+  {path: 'menu2', component: Menu2Component,canActivate:[AuthGuard]},
+  {path: 'menu3', component: Menu3Component,canActivate:[AuthGuard]},
+  {path: 'menu4', component: Menu4Component,canActivate:[AuthGuard]},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

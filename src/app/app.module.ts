@@ -1,3 +1,4 @@
+import { AuthGuard } from './guard/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,11 +8,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 import { LoginComponent } from './login/login.component';
-
+import { AuthService } from './login/auth.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { routing } from './app.routing';
 import { Menu1Component } from './menu1/menu1.component';
 import { HomeComponent } from './home/home.component';
 import { Menu2Component } from './menu2/menu2.component';
@@ -38,7 +39,7 @@ import { Menu4Component } from './menu4/menu4.component';
     MaterializeModule,
     routing
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

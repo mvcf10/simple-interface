@@ -1,5 +1,9 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-header *ngIf="showMenuBar"></app-header>
+<main>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<app-footer *ngIf="showMenuBar"></app-footer>
 
 
